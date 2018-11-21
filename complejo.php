@@ -42,22 +42,23 @@ class Complejo{
         return false;
     }
 
-    function toString(){
-        return '('.$this->real.' , '.$this->imaginaria.')';
+    function __toString(){
+        return '('.$this->real.' , '.$this->imaginaria.'i)';
     }
 
 }
 $complejo1 = new Complejo(2.3,4);
 $complejo2 = new Complejo(4,5);
 
-echo $complejo1->toString();
+echo 'Complejo 1 '.$complejo1;
+echo 'Complejo 2 '.$complejo2;
 
 $complejo1->sumar($complejo2);
 
-echo $complejo1->toString();
+echo $complejo1;
 
 $complejo1->mutiplicar($complejo2);
 
-echo $complejo1->toString();
+echo $complejo1;
 
 echo $complejo1->igual($complejo2);
